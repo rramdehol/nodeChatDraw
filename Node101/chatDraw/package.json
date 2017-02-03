@@ -16,5 +16,10 @@
     "JS"
   ],
   "author": "Ryan Ramdehol",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "connect": "^3.5.0",
+    "serve-static": "^1.11.2",
+    "socket.io": "^1.7.2"
+  }
 }

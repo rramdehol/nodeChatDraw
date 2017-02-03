@@ -38,7 +38,7 @@ var server = http.createServer((request, response)=>{
 		response.writeHead(404,{
 			"content-type":"text/html"
 		})
-		response.end("Sorry this page DNE")
+		response.end("Sorry this page DNE Does Not Exist")
 	}
 	// the response will close the connection server 
 	response.end("Sanity Check");

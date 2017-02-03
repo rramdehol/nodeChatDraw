@@ -1,0 +1,9 @@
+<h1>The students in this class are...</h1>
+<% students.map((student, index)=>{ %>
+	<li>
+		<%=student.name%><a href="/remove?name=<%= student.name %>">Delete?</a>
+	</li>
+<% }) %>
+<div>
+	<a href="/addNew">Add a new student</a>
+	</div>

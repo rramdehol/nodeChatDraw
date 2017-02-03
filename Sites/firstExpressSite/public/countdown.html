@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Test Countdown Timer</title>
+	<style type="text/css">
+		body{
+			background-image: url('') ;
+		}
+		#timer{
+			background-color: red;
+		}
+	</style>
+</head>
+<body>
+	<div id="timer">
+
+	</div>
+		<button onclick="pause()">Pause Timer Im so excited</button>
+		<button onclick="start()">Start Timer Im so excited</button>
+	<script type="text/javascript">
+		// UNIX time stamp
+		// returned in milliseconds
+		var now = Date.now();
+		// console.log(now/1000);
+		
+		var christmasDay = new Date("December 25, 2016 00:00").getTime();
+		// console.log(christmasDay/1000);
+		
+		var secondsTillChristmas = Math.floor((christmasDay-now)/1000);
+		// console.log(secondsTillChristmas);
+		
+		var minutesTillChristmas = Math.floor((secondsTillChristmas/60));
+		// console.log(minutesTillChristmas);
+
+		var hoursTillChristmas = Math.floor((minutesTillChristmas/60));
+		// console.log(hoursTillChristmas);
+
+		var daysTillChristmas = Math.floor((hoursTillChristmas/24));
+		// console.log(daysTillChristmas);
+
+		var timerDiv = document.getElementById('timer');
+		timerDiv.innerHTML = secondsTillChristmas + "seconds till Christmas"
+		// Gives the directory .dir
+		console.dir(timerDiv);
+
+		// 1.Update the counter each new second.
+		// 2.We need to recalculate the new distance between "now"&"then"
+		// 3.After recalulating, update the HTML with new number
+		setInterval(updateCounter, 1000);
+		function updateCounter(){
+			var now = Date.now();
+			// get the new timestamp (milliseconds since 1-1-1970);
+			var newSecondsTillChristmas = Math.floor(((christmasDay - now)/1000));
+			console.log(newSecondsTillChristmas);
+			timerDiv.innerHTML = newSecondsTillChristmas + " Seconds Till Christmas"
+		}
+
+		// Pause function
+		function pause(){
+			clearInterval(counterInterval);
+		}
+
+		// setInterval(FUNCTION TO RUN, HOW OFTEN(in milliseconds))
+		function start(){
+			counterInterval = setInterval(updateCounter,1000);
+		}
+		var counterInterval;
+	</script>
+
+</body>
+</html>

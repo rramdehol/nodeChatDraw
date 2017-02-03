@@ -1,0 +1,135 @@
+<script type="text/javascript">
+
+function Player(name, position, avgM, avgP, avgR, starter, species="human"){ //A function with an uppercase is a function constructor to create objects
+	// this refers to the object you're inside of
+	// Left is the property that can be named arbitrarily anything
+	// Right is the value
+	this.name = name;
+	this.position = position;
+	this.avgMinutesPlayed = avgM;
+	this.avgPoints = avgP;
+	this.avgRebounds = avgR;
+	this.starter = starter;
+	this.species = "human";
+	// this.reportPPM = function(){
+	// 	return this.avgPoints/this.avgMinutesPlayed;
+	// };
+}
+Player.prototype.reportPPM = function(){
+	return this.avgPoints/this.avgMinutesPlayed;
+}
+Player.prototype.species = "human"
+
+
+
+// Creates an instance of this construtor
+var player1 = new Player("Paul Millsap", "PF", 36, 16.4, 9.4, true);
+var player2 = new Player("Jeff Teague", "PG", 28.6, 15.6, 1.9, true);
+
+// var players = [
+//   {
+//     name: 'Paul Millsap',
+//     position: 'PF',
+//     avgMinutesPlayed: 36,
+//     avgPoints: 16.4,
+//     avgRebounds: 9.4,
+//     starter: true
+//   },
+//   {
+//     name: 'Jeff Teague',
+//     position: 'PG',
+//     avgMinutesPlayed: 28.6,
+//     avgPoints: 15.6,
+//     avgRebounds: 1.9,
+//     starter: true
+//   },
+//   {
+//     name: 'Al Horford',
+//     position: 'C',
+//     avgMinutesPlayed: 32,
+//     avgPoints: 13.2,
+//     avgRebounds: 6.8,
+//     starter: true
+//   },
+//   {
+//     name: 'Kent Bazemore',
+//     position: 'SF',
+//     avgMinutesPlayed: 31.8,
+//     avgPoints: 12,
+//     avgRebounds: 6.6,
+//     starter: true
+//   },
+//   {
+//     name: 'Kyle Korver',
+//     position: 'SG',
+//     avgMinutesPlayed: 32.4,
+//     avgPoints: 11.2,
+//     avgRebounds: 4.9,
+//     starter: true
+//   },
+//   {
+//     name: 'Dennis Schroder',
+//     position: 'PG',
+//     avgMinutesPlayed: 18.3,
+//     avgPoints: 10.7,
+//     avgRebounds: 1.8,
+//     starter: false
+//   },
+//   {
+//     name: 'Kris Humphries',
+//     position: 'PF',
+//     avgMinutesPlayed: 14.7,
+//     avgPoints: 9.7,
+//     avgRebounds: 5.7,
+//     starter: false
+//   },
+//   {
+//     name: 'Mike Scott',
+//     position: 'PF',
+//     avgMinutesPlayed: 17.6,
+//     avgPoints: 7.0,
+//     avgRebounds: 3.6,
+//     starter: false
+//   },
+//   {
+//     name: 'Thabo Sefolosha',
+//     position: 'SF',
+//     avgMinutesPlayed: 18.9,
+//     avgPoints: 4.8,
+//     avgRebounds: 3.9,
+//     starter: false
+//   },
+//   {
+//     name: 'Mike Muscala',
+//     position: 'PF',
+//     avgMinutesPlayed: 7.4,
+//     avgPoints: 2.7,
+//     avgRebounds: 1.9,
+//     starter: false
+//   },
+//   {
+//     name: 'Tim Hardaway Jr.',
+//     position: 'SG',
+//     avgMinutesPlayed: 9.7,
+//     avgPoints: 2.2,
+//     avgRebounds: 1.0,
+//     starter: false
+//   },
+//   {
+//     name: 'Lamar Patterson',
+//     position: 'SG',
+//     avgMinutesPlayed: 5.0,
+//     avgPoints: 1.5,
+//     avgRebounds: 1.3,
+//     starter: false
+//   },
+//   {
+//     name: 'Kirk Hinrich',
+//     position: 'SG',
+//     avgMinutesPlayed: 4.5,
+//     avgPoints: 0.8,
+//     avgRebounds: 0.7,
+//     starter: false
+//   }
+// ];
+</script>
